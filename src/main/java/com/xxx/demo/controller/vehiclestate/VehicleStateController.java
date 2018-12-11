@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping({"/vehiclestate"})
-public class vehicleStateController {
+public class VehicleStateController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private VehicleStateService vehicleStateService;
