@@ -11,21 +11,5 @@ import com.xxx.demo.jsonBean.remote.remoteRequestParmmeter.DeleteDataRequestPara
  * @author:@guo.zj
  */
 public interface VehicleStateService {
-    /**
-     * 车辆状态
-     *
-     * @param vin车架号
-     * @return 车辆状态
-     */
-    JSONObject vehiclestate(RequestParameters request);
-
-
-    /**
-     * 车辆状态
-     *
-     * @param vin车架号
-     * @return 重置状态
-     */
-    JSONObject deletedata(DeleteDataRequestParameter request);
 }
 

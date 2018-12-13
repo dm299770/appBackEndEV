@@ -1,11 +1,11 @@
 package com.xxx.demo.jsonBean.remote.remotemodel;
 
 /**
- * 车锁/天窗
+ * 空调速度
  * @author guo.zj
  */
-public class VehicleCtrl {
-    private int action;
+public class VehicleAirTiming {
+    private long time;
     private String vin;
 
 
@@ -18,11 +18,11 @@ public class VehicleCtrl {
     }
 
 
-    public int getAction() {
-        return action;
+    public long getTime() {
+        return time;
     }
 
-    public void setAction(int action) {
-        this.action = action;
+    public void setTime(long time) {
+        this.time = time;
     }
 }

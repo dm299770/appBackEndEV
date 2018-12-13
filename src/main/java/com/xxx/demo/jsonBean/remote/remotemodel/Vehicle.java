@@ -4,8 +4,7 @@ package com.xxx.demo.jsonBean.remote.remotemodel;
  * 车锁/天窗
  * @author guo.zj
  */
-public class VehicleCtrl {
-    private int action;
+public class Vehicle {
     private String vin;
 
 
@@ -17,12 +16,4 @@ public class VehicleCtrl {
         this.vin = vin;
     }
 
-
-    public int getAction() {
-        return action;
-    }
-
-    public void setAction(int action) {
-        this.action = action;
-    }
 }

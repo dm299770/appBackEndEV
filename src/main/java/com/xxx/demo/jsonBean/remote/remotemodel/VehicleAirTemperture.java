@@ -1,11 +1,11 @@
 package com.xxx.demo.jsonBean.remote.remotemodel;
 
 /**
- * 车锁/天窗
+ * 空调温度
  * @author guo.zj
  */
-public class VehicleCtrl {
-    private int action;
+public class VehicleAirTemperture {
+    private int temperture;
     private String vin;
 
 
@@ -18,11 +18,11 @@ public class VehicleCtrl {
     }
 
 
-    public int getAction() {
-        return action;
+    public int getTemperture() {
+        return temperture;
     }
 
-    public void setAction(int action) {
-        this.action = action;
+    public void setTemperture(int temperture) {
+        this.temperture = temperture;
     }
 }
