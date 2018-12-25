@@ -44,7 +44,7 @@ public interface RemoteService {
      * @param vin车架号 操作类型
      * @return 成功失败
      */
-    JSONObject airconditionertrun(RequestParameterForCtrl request);
+    JSONObject airconditionertrun(RequestAirCondition request);
 
 
     /**

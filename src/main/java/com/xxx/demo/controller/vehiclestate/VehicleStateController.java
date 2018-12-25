@@ -3,7 +3,9 @@ package com.xxx.demo.controller.vehiclestate;
 import com.alibaba.fastjson.JSONObject;
 import com.xxx.demo.jsonBean.remote.RequestParameters;
 import com.xxx.demo.jsonBean.remote.remoteRequestParmmeter.DeleteDataRequestParameter;
+import com.xxx.demo.jsonBean.remote.request.RequestVin;
 import com.xxx.demo.jsonBean.vehiclestate.VehicleState;
+import com.xxx.demo.jsonBean.vehiclestate.request.RequestParameterForVehicleState;
 import com.xxx.demo.services.finder.FinderService;
 import com.xxx.demo.services.vehicleState.VehicleStateService;
 import org.slf4j.Logger;
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 /**
- * @description:远程寻车
+ * @description:车辆状态
  * @author:@guo.zj
  */
 @RestController
@@ -26,8 +28,8 @@ public class VehicleStateController {
     @Autowired
     private VehicleStateService vehicleStateService;
     @ResponseBody
-    @RequestMapping(value = "vehiclestate")
-    public Object finder(@RequestBody RequestParameters data) {
+    @RequestMapping(value = "VehicleState")
+    public Object vehiclestate(@RequestBody RequestParameterForVehicleState data) {
         JSONObject result=null;
         try {
             result = vehicleStateService.vehiclestate(data);
@@ -40,11 +42,11 @@ public class VehicleStateController {
 
 
     @ResponseBody
-    @RequestMapping(value = "deletedata")
-    public Object deletedata(@RequestBody DeleteDataRequestParameter data) {
+    @RequestMapping(value = "airConditionState")
+    public Object deletedata(@RequestBody RequestVin data) {
         JSONObject result=null;
         try {
-            result = vehicleStateService.deletedata(data);
+            result = vehicleStateService.airConditionState(data);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

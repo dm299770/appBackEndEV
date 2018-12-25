@@ -35,7 +35,7 @@ public class RemoteController {
         try {
             result = remoteService.remotedoor(data);
         } catch (Exception e) {
-            // TODO Auto-generated  catch block
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return result;
@@ -67,7 +67,7 @@ public class RemoteController {
      */
     @ResponseBody
     @RequestMapping(value = "airconditionertrun")
-    public Object airconditionertrun(@RequestBody RequestParameterForCtrl data) {
+    public Object airconditionertrun(@RequestBody RequestAirCondition data) {
         JSONObject result=null;
         try {
             result = remoteService.airconditionertrun(data);
@@ -95,7 +95,6 @@ public class RemoteController {
         }
         return result;
     }
-
 
     /**
      * @description:空调风速
@@ -142,7 +141,7 @@ public class RemoteController {
         try {
             result = remoteService.defrost(data);
         } catch (Exception e) {
-            // TODO Auto-generated  catch block
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return result;
@@ -159,12 +158,11 @@ public class RemoteController {
         try {
             result = remoteService.horn(data);
         } catch (Exception e) {
-            // TODO Auto-generated  catch block
+            // TODO Auto-generated  catch
             e.printStackTrace();
         }
         return result;
     }
-
 
 
     /**
@@ -196,9 +194,8 @@ public class RemoteController {
         try {
             result = remoteService.remotedoor(data);
         } catch (Exception e) {
-            // TODO Auto-generated  catch block
+            // TODO Auto-generated catch block
             e.printStackTrace();
-
         }
         return result;
     }

@@ -1,90 +1,135 @@
 package com.xxx.demo.jsonBean.vehiclestate;
 
+import com.xxx.demo.models.vehiclestate.Tirepressure;
+import com.xxx.demo.models.vehiclestate.WindowStatus;
+
+
 /**
- * 远程寻车
+ *车辆状态
  * @author guo.zj
  */
 public class VehicleState {
+    //请求ID
+    private String requestid;
+    //剩余电量
+    private Float resbatterycap;
+    //后备箱状态
+    private int trunkstatus;
+    //驾驶状态
+    private String drivingstatus;
+    //充电状态
+    private String chargingstatus;
+    //胎压
+    private Tirepressure tirepressure;
+    //车锁状态
+    private int doorstatus;
+    //天窗状态
+    private int sunroofstatus;
+    //上报时间
+    private long updatetime;
+    //车窗
+    private WindowStatus windowstatus;
     //续航里程
-    private String endurancemileage;
-   //总里程
-    private int mileage;
-   //剩余油量
-    private String oilconsumption;
-    //行驶里程
-    private String roadhaul;
-    //行驶状态
-    private String drivingstate;
-    //百公里油耗
-    private String fcphk;
-    //形式百分比
-    private int partmileage;
-
-    public String getTire() {
-        return tire;
+    private Float usablekm;
+    //百公里耗电
+    private Float consumerate;
+    public String getRequestid() {
+        return requestid;
     }
 
-    public void setTire(String tire) {
-        this.tire = tire;
+    public void setRequestid(String requestid) {
+        this.requestid = requestid;
     }
 
-    //胎压状态
-    private String tire;
 
 
-    public int getPartmileage() {
-        return partmileage;
-    }
-    public void setPartmileage(int partmileage) {
-        this.partmileage = partmileage;
+    public int getTrunkstatus() {
+        return trunkstatus;
     }
 
-    public String getEndurancemileage() {
-        return endurancemileage;
+    public void setTrunkstatus(int trunkstatus) {
+        this.trunkstatus = trunkstatus;
     }
 
-    public void setEndurancemileage(String endurancemileage) {
-        this.endurancemileage = endurancemileage;
+    public String getDrivingstatus() {
+        return drivingstatus;
     }
 
-    public int getMileage() {
-        return mileage;
+    public void setDrivingstatus(String drivingstatus) {
+        this.drivingstatus = drivingstatus;
     }
 
-    public void setMileage(int mileage) {
-        this.mileage = mileage;
+    public String getChargingstatus() {
+        return chargingstatus;
     }
 
-    public String getOilconsumption() {
-        return oilconsumption;
+    public void setChargingstatus(String chargingstatus) {
+        this.chargingstatus = chargingstatus;
     }
 
-    public void setOilconsumption(String oilconsumption) {
-        this.oilconsumption = oilconsumption;
+
+    public int getDoorstatus() {
+        return doorstatus;
     }
 
-    public String getRoadhaul() {
-        return roadhaul;
+    public void setDoorstatus(int doorstatus) {
+        this.doorstatus = doorstatus;
     }
 
-    public void setRoadhaul(String roadhaul) {
-        this.roadhaul = roadhaul;
+    public int getSunroofstatus() {
+        return sunroofstatus;
     }
 
-    public String getDrivingstate() {
-        return drivingstate;
+    public void setSunroofstatus(int sunroofstatus) {
+        this.sunroofstatus = sunroofstatus;
     }
 
-    public void setDrivingstate(String drivingstate) {
-        this.drivingstate = drivingstate;
+    public long getUpdatetime() {
+        return updatetime;
     }
 
-    public String getFcphk() {
-        return fcphk;
+    public void setUpdatetime(long updatetime) {
+        this.updatetime = updatetime;
     }
 
-    public void setFcphk(String fcphk) {
-        this.fcphk = fcphk;
+
+    public Float getResbatterycap() {
+        return resbatterycap;
     }
 
+    public void setResbatterycap(Float resbatterycap) {
+        this.resbatterycap = resbatterycap;
+    }
+
+    public WindowStatus getWindowstatus() {
+        return windowstatus;
+    }
+
+    public void setWindowstatus(WindowStatus windowstatus) {
+        this.windowstatus = windowstatus;
+    }
+
+    public Tirepressure getTirepressure() {
+        return tirepressure;
+    }
+
+    public void setTirepressure(Tirepressure tirepressure) {
+        this.tirepressure = tirepressure;
+    }
+
+    public Float getUsablekm() {
+        return usablekm;
+    }
+
+    public void setUsablekm(Float usablekm) {
+        this.usablekm = usablekm;
+    }
+
+    public Float getConsumerate() {
+        return consumerate;
+    }
+
+    public void setConsumerate(Float consumerate) {
+        this.consumerate = consumerate;
+    }
 }

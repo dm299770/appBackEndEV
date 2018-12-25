@@ -67,7 +67,7 @@ public class UserController {
 //    }
 
     /**
-     *获取用户信息
+     * 获取用户信息
      */
     @LoginRequired
     @ResponseBody
@@ -88,7 +88,7 @@ public class UserController {
     }
 
     /***
-     *重置密码
+     * 重置密码
      **/
     @LoginRequired
     @ResponseBody

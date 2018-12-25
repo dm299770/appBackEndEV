@@ -4,6 +4,7 @@ package com.xxx.demo.services.remote.impl;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.xxx.demo.jsonBean.finder.request.RequestParameterForCtrl;
+import com.xxx.demo.jsonBean.remote.remotemodel.AirCondition;
 import com.xxx.demo.jsonBean.remote.request.*;
 import com.xxx.demo.services.remote.RemoteService;
 import org.slf4j.Logger;
@@ -25,8 +26,7 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
-            String vin = data.getData().getVin();
+             String vin = data.getData().getVin();
             int action = data.getData().getAction();
             Thread.sleep(2000);
             JSONArray jsonArray = new JSONArray();
@@ -62,7 +62,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             int action = data.getData().getAction();
             Thread.sleep(2000);
@@ -95,29 +94,25 @@ public class RemoteServiceImpl implements RemoteService {
     }
 
     @Override
-    public JSONObject airconditionertrun(RequestParameterForCtrl data) {
+    public JSONObject airconditionertrun(RequestAirCondition data) {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             int action = data.getData().getAction();
+            AirCondition acparam=new AirCondition();
+            acparam= data.getData().getAcparam();
             Thread.sleep(2000);
             JSONArray jsonArray = new JSONArray();
             if(vin==null||"".equals(vin)){
                 jsonObject.put("status", 201);
                 jsonObject.put("msg", "传入参数有误");
                 jsonObject.put("data","");
-            }else if ( "NISSAN0000000000".equals(vin)&& action==0) {
+            }else if ( "NISSAN0000000000".equals(vin)) {
                 jsonObject.put("status", 200);
-                jsonObject.put("msg", "指令下发成功");
+                jsonObject.put("msg", "下发成功");
                 logger.info("返回的json:{}", jsonObject);
-            } else if("NISSAN0000000000".equals(vin)&& action==1) {
-                jsonObject.put("status", 200);
-                jsonObject.put("msg", "指令下发成功");
-                logger.info("返回的json:{}", jsonObject);
-
-            }else {
+            } else {
                 jsonObject.put("status", 400);
                 jsonObject.put("msg", "failed");
                 logger.info("返回的json:{}",jsonObject);
@@ -136,7 +131,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             int temperture = data.getData().getTemperture();
             Thread.sleep(2000);
@@ -149,11 +143,6 @@ public class RemoteServiceImpl implements RemoteService {
                 jsonObject.put("status", 200);
                 jsonObject.put("msg", "指令下发成功");
                 logger.info("返回的json:{}", jsonObject);
-            } else if("NISSAN0000000000".equals(vin)) {
-                jsonObject.put("status", 200);
-                jsonObject.put("msg", "指令下发成功");
-                logger.info("返回的json:{}", jsonObject);
-
             }else {
                 jsonObject.put("status", 400);
                 jsonObject.put("msg", "failed");
@@ -173,7 +162,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             int speed = data.getData().getSpeed();
             Thread.sleep(2000);
@@ -186,11 +174,6 @@ public class RemoteServiceImpl implements RemoteService {
                 jsonObject.put("status", 200);
                 jsonObject.put("msg", "指令下发成功");
                 logger.info("返回的json:{}", jsonObject);
-            } else if("NISSAN0000000000".equals(vin)) {
-                jsonObject.put("status", 200);
-                jsonObject.put("msg", "指令下发成功");
-                logger.info("返回的json:{}", jsonObject);
-
             }else {
                 jsonObject.put("status", 400);
                 jsonObject.put("msg", "failed");
@@ -210,7 +193,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             long time = data.getData().getTime();
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -248,7 +230,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             Thread.sleep(2000);
             JSONArray jsonArray = new JSONArray();
@@ -279,7 +260,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             Thread.sleep(2000);
             JSONArray jsonArray = new JSONArray();
@@ -310,7 +290,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             int action = data.getData().getAction();
             Thread.sleep(2000);
@@ -347,7 +326,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             int action = data.getData().getAction();
             Thread.sleep(2000);
@@ -384,7 +362,6 @@ public class RemoteServiceImpl implements RemoteService {
         JSONObject jsonObject = new JSONObject();
         try {
             logger.info("请求体:" + data);
-            //Finder finder = JSON.parseObject(request, FinderRequestParameter.class).getData();
             String vin = data.getData().getVin();
             int action = data.getData().getAction();
             String wsite = data.getData().getWsite();
@@ -394,7 +371,7 @@ public class RemoteServiceImpl implements RemoteService {
                 jsonObject.put("status", 201);
                 jsonObject.put("msg", "传入参数有误");
                 jsonObject.put("data", "");
-            }else if (!wsite.equals("FL")||!wsite.equals("FR") ||!wsite.equals("BL") ||!wsite.equals("BR")) {
+            }else if (!wsite.equals("FL")) {
                 jsonObject.put("status", 400);
                 jsonObject.put("msg", "failed");
                 logger.info("返回的json:{}",jsonObject);
